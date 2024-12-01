@@ -1,6 +1,6 @@
 #Ładowanie danych
-import torch  # Import PyTorch
-from torchvision import datasets, transforms  # Import narzędzi do pracy z danymi obrazowymi
+import torch  
+from torchvision import datasets, transforms  
 
 
 def load_data(batch_size=64):  # Funkcja do ładowania danych
