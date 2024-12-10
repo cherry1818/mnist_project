@@ -5,9 +5,8 @@ from train import train
 from test import test
 
 def main():
-    # Parametry
-    batch_size = 64
-    epochs = 5
+    batch_size = 64 #liczba przykładów przetwarzanych jednoczesnie
+    epochs = 5 #ile razy przepuskamy zbiór danych przez model
     learning_rate = 0.001
 
     # Wykrywanie urządzenia
