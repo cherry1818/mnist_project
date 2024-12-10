@@ -1,17 +1,17 @@
 #Ładowanie danych
-import torch  
-from torchvision import datasets, transforms  
+import torch
+from torchvision import datasets, transforms
 
 
-def load_data(batch_size=64):  # Funkcja do ładowania danych
-    transform = transforms.Compose([  # Kompozycja przekształceń do zastosowania na obrazach
+def load_data(batch_size=64):
+    transform = transforms.Compose([
         transforms.ToTensor(),  # Konwersja obrazu na tensor
         transforms.Normalize((0.5,), (0.5,))  # Normalizacja danych (średnia = 0, odchylenie standardowe = 1)
     ])
-    train_dataset = datasets.MNIST(  # Pobranie zbioru treningowego MNIST
+    train_dataset = datasets.MNIST(
         root='./data', train=True, transform=transform, download=True
     )
-    test_dataset = datasets.MNIST(  # Pobranie zbioru testowego MNIST
+    test_dataset = datasets.MNIST(
         root='./data', train=False, transform=transform, download=True
     )
 
